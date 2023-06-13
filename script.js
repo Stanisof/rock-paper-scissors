@@ -1,30 +1,77 @@
+let scorePlayer = 0;
+let scoreComp = 0;
+
 function getComputerChoice() {
     let choiceArray = ["rock", "paper", "scissors"];
-   let computerChoice = Math.floor(Math.random() * choiceArray.length);
+    let computerChoice = Math.floor(Math.random() * choiceArray.length);
    return choiceArray[computerChoice];
 }
 
 
+
+
 function playRound(playerSelection, computerSelection) {
 
-let playerChoice = playerSelection.toLowerCase()
+computerSelection = getComputerChoice();
+playerSelection = prompt("Make a choice!", 'Rock, paper or scissors?').toLowerCase();
 
-    if (playerChoice === computerSelection) {
-        return "It's a tie"
+    if (playerSelection === computerSelection) {
+        console.log("It's a tie")
+        return 0
 
-    } else if (playerChoice === "rock" && computerSelection === "scissors"){
-        return "You won! Rock beats scissors.";
+    } else if (playerSelection === "rock" && computerSelection === "scissors"){
+        console.log("You won! Rock beats scissors.")
+        return 1;
 
-    } else if (playerChoice === "paper" && computerSelection == "rock") {
-        return "You won! Paper beats rock.";
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+        console.log("You won! Paper beats rock.")
+        return 1;
 
-    } else if (playerChoice === "scissors" && computerSelection === "paper") {
-        return "You won! Scissors beats paper.";
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+        console.log("You won! Scissors beats paper.")
+        return 1;
 
     } else {
-        return `You lost! The computer chose ${computerSelection}.`;
+        console.log(`You lost! The computer chose ${computerSelection}.`)
+        return 2;
     }
 }
+
+
+
+
+
+function game() {
+
+result = playRound()
+
+
+ 
+
+    if (result === 0) {
+        console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer`);
+
+    } else if (result === 1 ) {
+        ++scorePlayer;
+        console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer.`);
+        
+
+    } else if (result === 2) {
+        ++scoreComp;
+        console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer.`);
+        
+
+    } else if (scorePlayer === 5) {
+        console.log(`You won the round! You won five times and the computer scored ${scoreComp}`);
+
+    } else if (scoreComp === 5) {
+        console.log(`You loose with a score of ${scorePlayer}.`)
+    }
+}
+
+
+
+
 
    //    if
 //    (computerChoice == 0) {
