@@ -43,10 +43,7 @@ playerSelection = prompt("Make a choice!", 'Rock, paper or scissors?').toLowerCa
 
 function game() {
 
-result = playRound()
-
-
- 
+result = playRound() 
 
     if (result === 0) {
         console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer`);
@@ -59,13 +56,17 @@ result = playRound()
     } else if (result === 2) {
         ++scoreComp;
         console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer.`);
-        
+    }
 
-    } else if (scorePlayer === 5) {
+    if (scorePlayer === 5) {
         console.log(`You won the round! You won five times and the computer scored ${scoreComp}`);
+        scorePlayer = 0;
+        scoreComp = 0;
 
     } else if (scoreComp === 5) {
         console.log(`You loose with a score of ${scorePlayer}.`)
+        scorePlayer = 0;
+        scoreComp = 0;
     }
 }
 
