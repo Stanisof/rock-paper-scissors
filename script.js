@@ -9,7 +9,6 @@ function getComputerChoice() {
 
 
 
-
 function playRound(playerSelection, computerSelection) {
 
 computerSelection = getComputerChoice();
@@ -36,8 +35,6 @@ playerSelection = prompt("Make a choice!", 'Rock, paper or scissors?').toLowerCa
         return 2;
     }
 }
-
-
 
 
 
@@ -69,39 +66,3 @@ result = playRound()
         scoreComp = 0;
     }
 }
-
-
-
-
-
-   //    if
-//    (computerChoice == 0) {
-   //     console.log("Rock")
-//     return 0;
-//    }
-//    else if 
-//    (computerChoice == 1) {
-//     return "Paper";
-//    }
-//    else if
-//    (computerChoice == 2) {
-//     return "Scissors";
-//    }
-
-// let playThrough = 0;
-
-// if (playerChoice === "rock") {
-//     playThrough = 0;
-// } else if (playerChoice === "paper") {
-//     playThrough = 1;
-// } else if (playerChoice === "scissors") {
-//     playThrough = 2;
-// }
-
-// if (computerSelection === "rock") {
-//     compThrough = 0;
-// } else if (computerSelection === "paper") {
-//     compThrough = 1;
-// } else if (computerSelection === "scissors") {
-//     compThrough = 2;
-// }
