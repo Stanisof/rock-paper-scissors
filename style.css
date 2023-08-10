@@ -22,27 +22,27 @@ button {
     transition-duration: 0.4s;
 }
 
-.rock:hover {
+#rock:hover {
     background-color: rgb(193, 193, 193);
 }
 
-.rock {
+#rock {
     border: 3px solid rgb(193, 193, 193);
 }
 
-.paper {
+#paper {
     border: 3px solid rgb(245, 245, 152)
 }
 
-.paper:hover {
+#paper:hover {
     background-color: rgb(245, 245, 152);
 }
 
-.scissors {
+#scissors {
     border: 3px solid coral;
 }
 
-.scissors:hover {
+#scissors:hover {
     background-color: coral;
 }
 
