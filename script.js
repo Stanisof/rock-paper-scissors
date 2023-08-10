@@ -46,13 +46,11 @@ result = playRound()
         console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer`);
 
     } else if (result === 1 ) {
-        ++scorePlayer;
-        console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer.`);
+        console.log(`The score is ${++scorePlayer} for you and ${scoreComp} for the computer.`);
         
 
     } else if (result === 2) {
-        ++scoreComp;
-        console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer.`);
+        console.log(`The score is ${scorePlayer} for you and ${++scoreComp} for the computer.`);
     }
 
     if (scorePlayer === 5) {
