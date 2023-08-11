@@ -32,23 +32,23 @@ computerSelection = getComputerChoice();
 playerSelection = player;
 
     if (playerSelection === computerSelection) {
-        console.log("It's a tie")
+        document.getElementById("result").textContent = "It's a tie.";
         return 0
 
     } else if (playerSelection === "rock" && computerSelection === "scissors"){
-        console.log("You won! Rock beats scissors.")
+        document.getElementById("result").textContent = "You won! Rock beats scissors."
         return 1;
 
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        console.log("You won! Paper beats rock.")
+        document.getElementById("result").textContent = "You won! Paper beats rock."
         return 1;
 
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        console.log("You won! Scissors beats paper.")
+        document.getElementById("result").textContent = "You won! Scissors beats paper."
         return 1;
 
     } else {
-        console.log(`You lost! The computer chose ${computerSelection}.`)
+        document.getElementById("result").textContent = `You lost! The computer chose ${computerSelection}.`
         return 2;
     }
 }
@@ -60,23 +60,26 @@ function game() {
 result = playRound() 
 
     if (result === 0) {
-        console.log(`The score is ${scorePlayer} for you and ${scoreComp} for the computer`);
+        document.getElementById("scorePlayer").textContent = ` ${scorePlayer}`;
+        document.getElementById("scoreComp").textContent = ` ${scoreComp}`;
 
     } else if (result === 1 ) {
-        console.log(`The score is ${++scorePlayer} for you and ${scoreComp} for the computer.`);
+        document.getElementById("scorePlayer").textContent = ` ${++scorePlayer}`;
+        document.getElementById("scoreComp").textContent = ` ${scoreComp}`;
         
 
     } else if (result === 2) {
-        console.log(`The score is ${scorePlayer} for you and ${++scoreComp} for the computer.`);
+        document.getElementById("scorePlayer").textContent = ` ${scorePlayer}`;
+        document.getElementById("scoreComp").textContent = ` ${++scoreComp}`;
     }
 
     if (scorePlayer === 5) {
-        console.log(`You won the round! You won five times and the computer scored ${scoreComp}`);
+        document.getElementById("endResult").textContent = `You won the round with five wins and the computer scored ${scoreComp}.`;
         scorePlayer = 0;
         scoreComp = 0;
 
     } else if (scoreComp === 5) {
-        console.log(`You loose with a score of ${scorePlayer}.`)
+        document.getElementById("endResult").textContent = `You loose with a score of ${scorePlayer}.`;
         scorePlayer = 0;
         scoreComp = 0;
     }

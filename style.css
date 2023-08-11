@@ -52,6 +52,15 @@ button {
     gap: 20px;
 }
 
+#result,
+#endResult {
+    align-self: center;
+}
+
 .container.options {
     padding: 50px 0px;
+}
+
+.container.score div {
+    display: flex;
 }
