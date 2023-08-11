@@ -7,13 +7,13 @@ function getComputerChoice() {
    return choiceArray[computerChoice];
 }
 
-let btnRock = document.querySelector('#rock');
+const btnRock = document.querySelector('#rock');
 btnRock.addEventListener('click', () => {
     player = "rock";
     game();
 })
 
-let btnPaper = document.querySelector('#paper');
+const btnPaper = document.querySelector('#paper');
 btnPaper.addEventListener('click', () => {
     player = "paper";
     game();
@@ -57,7 +57,8 @@ playerSelection = player;
 
 function game() {
 
-result = playRound() 
+result = playRound();
+document.getElementById("endResult").textContent = "";
 
     if (result === 0) {
         document.getElementById("scorePlayer").textContent = ` ${scorePlayer}`;
